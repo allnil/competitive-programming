@@ -1,0 +1,3 @@
+/Users/nil.medvedev/Projects/my/competetive-programming/problem_set/problem1/cmake-build-debug/CMakeFiles/problem1.dir
+/Users/nil.medvedev/Projects/my/competetive-programming/problem_set/problem1/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/nil.medvedev/Projects/my/competetive-programming/problem_set/problem1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
