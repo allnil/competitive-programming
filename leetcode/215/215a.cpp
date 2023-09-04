@@ -1,3 +1,9 @@
+const int ZERO = [](){
+  ios_base::sync_with_stdio(false);
+  cin.tie(nullptr);
+  return 0;
+}();
+
 class Solution {
   public:
 
@@ -6,3 +12,4 @@ class Solution {
      return nums[nums.size() - k]; 
     }
 };
+
