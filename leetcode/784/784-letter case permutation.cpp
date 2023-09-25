@@ -1,3 +1,9 @@
+const int ZERO = [](){
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
+    return 0;
+}();
+
 class Solution {
 public:
     void backtracking(vector<string>& ans, const string& s, int pos, string cur){
@@ -17,9 +23,6 @@ public:
         return;
     }
 
-// 1. Go through the string
-// 2. If there is a 'a-z' - toUpper if 'A - Z' toLower
-// 3.
     vector<string> letterCasePermutation(string s) {
         vector<string> ans;
         backtracking(ans, s, 0, "");
