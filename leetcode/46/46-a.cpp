@@ -4,32 +4,30 @@ const int ZERO = [](){
     return 0;
 }();
 
-
 class Solution {
-public:
-    vector<vector<int>> ans;
-    vector<int> p;
-    vector<bool> vis;
-
-    void backtrack(int cur_i, vector<int>& nums) {
-        if(p.size() == nums.size()){
+    void generate(const vector<int>& n, vector<vector<int>>& ans, vector<int>& p, vector<bool>& vis, int pos){
+        if(p.size() == n.size()){
             ans.push_back(p);
+            return;
         }
-        for(int i = 0; i < nums.size(); i++){
-            if(vis[i]) continue;
-            if(p.size() <= nums.size()){
-                p.push_back(nums[i]);
-                vis[i] = true;
-                backtrack(cur_i + 1, nums);
-                vis[i] = false;
-                p.pop_back();
-            }
+
+        for(int i = 0; i < n.size(); i++){
+            if(vis[i])continue;
+
+            p.push_back(n[i]);
+            vis[i] = true;
+            generate(n, ans, p, vis, pos + 1);
+            vis[i] = false;
+            p.pop_back();
         }
     }
 
+public:
     vector<vector<int>> permute(vector<int>& nums) {
-        vis.resize(nums.size());
-        backtrack(0, nums);
-        return ans;
+       vector<vector<int>> ans;
+       vector<int> cur_ans;
+       vector<bool> vis(nums.size(), false);
+       generate(nums, ans, cur_ans, vis, 0);
+       return ans;
     }
 };
