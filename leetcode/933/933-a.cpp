@@ -8,7 +8,6 @@ class RecentCounter {
     queue<int> q;
 public:
     RecentCounter() {
-        q = queue<int>();
     }
     
     int ping(int t) {
@@ -16,9 +15,6 @@ public:
            q.pop();
        }
        q.push(t);
-        if(q.size() == 0){
-            return 0;
-        } 
        return q.size(); 
     }
 };
